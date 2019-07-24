@@ -6,6 +6,10 @@
 
 import UIKit
 
+protocol changeTextfieldTextDelegate:class {
+    func updateTextFieldFont(fontName: String )
+    func updateTextFieldColor(color: UIColor )
+}
 class MemeViewController: UIViewController {
     
     @IBOutlet weak var topToolbar: UIToolbar!
@@ -13,20 +17,24 @@ class MemeViewController: UIViewController {
     @IBOutlet weak var bottomText: UITextField!
     @IBOutlet weak var imageVw: UIImageView!
     @IBOutlet weak var subView: UIView!
+    
     var imagePassed: UIImage!
+    var colorPassed: UIColor!
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.font: UIFont(name: "DIN Alternate", size: 40)!,
         NSAttributedString.Key.strokeWidth:  -4.0    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       imageVw.image = imagePassed
+        imageVw.image = imagePassed
+        imageVw.backgroundColor = colorPassed
         setStyle(toTextField: topText)
         setStyle(toTextField: bottomText)
-        
+        updateTextField()
    
         
     }
@@ -53,6 +61,7 @@ class MemeViewController: UIViewController {
         topText.text = "TOP"
         bottomText.text = "BOTTOM"
         textField.defaultTextAttributes = memeTextAttributes
+        
         textField.clearsOnBeginEditing = true
         textField.delegate = self
     }
@@ -107,10 +116,29 @@ class MemeViewController: UIViewController {
     
     
 }
-extension MemeViewController: UITextFieldDelegate {
+extension MemeViewController: UITextFieldDelegate , changeTextfieldTextDelegate{
+    
+    
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
+    func updateTextFieldFont(fontName: String) {
+        topText.defaultTextAttributes = [
+            NSAttributedString.Key.strokeColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont(name: fontName, size: 40)!,
+            NSAttributedString.Key.strokeWidth:  -4.0    ]
+    }
+    func updateTextFieldColor(color: UIColor) {
+        topText.defaultTextAttributes = [
+            NSAttributedString.Key.foregroundColor: color,
+        ]
+    }
+    func updateTextField(){
+        let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = sb.instantiateViewController(withIdentifier: "MasterViewController") as! MasterViewController
+        vc.delegate = self
+    }
 }

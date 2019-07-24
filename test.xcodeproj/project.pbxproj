@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B47CDB922CAF3E600C7DFCA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B47CDB822CAF3E600C7DFCA /* Images.xcassets */; };
 		5B74625422D29BFA00915A42 /* MemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74625322D29BFA00915A42 /* MemeViewController.swift */; };
-		5B74625622D2A01400915A42 /* SubviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74625522D2A01400915A42 /* SubviewViewController.swift */; };
+		5B854E1122DE5F9F0061943F /* FetchImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B854E1022DE5F9F0061943F /* FetchImages.swift */; };
 		5B933B8622CE807000E2135B /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933B8522CE807000E2135B /* DataTableViewController.swift */; };
 		5B933B8822CE89E100E2135B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933B8722CE89E100E2135B /* Colors.swift */; };
 		5B933B8B22CEAB5C00E2135B /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933B8922CEAB5C00E2135B /* FirstTableViewCell.swift */; };
@@ -18,6 +18,7 @@
 		5B933B9022CEAB6E00E2135B /* SecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B933B8E22CEAB6E00E2135B /* SecondTableViewCell.xib */; };
 		5B933B9622CEC3A500E2135B /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933B9422CEC3A500E2135B /* FirstCollectionViewCell.swift */; };
 		5B933B9722CEC3A500E2135B /* FirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B933B9522CEC3A500E2135B /* FirstCollectionViewCell.xib */; };
+		5BBD1A9A22E55DCE007A11BA /* ImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBD1A9922E55DCE007A11BA /* ImageDelegate.swift */; };
 		5BE7225322B9D13A00E2560C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7225222B9D13A00E2560C /* AppDelegate.swift */; };
 		5BE7225522B9D13A00E2560C /* FrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7225422B9D13A00E2560C /* FrontViewController.swift */; };
 		5BE7225822B9D13A00E2560C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7225622B9D13A00E2560C /* Main.storyboard */; };
@@ -25,12 +26,17 @@
 		5BE7226022B9D13E00E2560C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7225E22B9D13E00E2560C /* LaunchScreen.storyboard */; };
 		5BE7B0BB22D026BB00E0D705 /* PicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7B0BA22D026BB00E0D705 /* PicViewController.swift */; };
 		5BE7B0BD22D0282700E0D705 /* PicViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7B0BC22D0282700E0D705 /* PicViewCell.swift */; };
+		5BFE6B7C22E6AE0800F56D56 /* FontData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE6B7B22E6AE0800F56D56 /* FontData.swift */; };
+		5BFE6B7E22E6CCC300F56D56 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE6B7D22E6CCC300F56D56 /* MasterViewController.swift */; };
+		5BFE6B8022E6CDE700F56D56 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE6B7F22E6CDE700F56D56 /* FontViewController.swift */; };
+		5BFE6B8222E6CDFC00F56D56 /* FontColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE6B8122E6CDFC00F56D56 /* FontColorViewController.swift */; };
+		5BFE6B8622E7F69600F56D56 /* FontCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFE6B8522E7F69600F56D56 /* FontCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B47CDB822CAF3E600C7DFCA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5B74625322D29BFA00915A42 /* MemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeViewController.swift; sourceTree = "<group>"; };
-		5B74625522D2A01400915A42 /* SubviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubviewViewController.swift; sourceTree = "<group>"; };
+		5B854E1022DE5F9F0061943F /* FetchImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImages.swift; sourceTree = "<group>"; };
 		5B933B8522CE807000E2135B /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		5B933B8722CE89E100E2135B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5B933B8922CEAB5C00E2135B /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
@@ -39,6 +45,7 @@
 		5B933B8E22CEAB6E00E2135B /* SecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondTableViewCell.xib; sourceTree = "<group>"; };
 		5B933B9422CEC3A500E2135B /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B933B9522CEC3A500E2135B /* FirstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCollectionViewCell.xib; sourceTree = "<group>"; };
+		5BBD1A9922E55DCE007A11BA /* ImageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDelegate.swift; sourceTree = "<group>"; };
 		5BE7224F22B9D13A00E2560C /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE7225222B9D13A00E2560C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE7225422B9D13A00E2560C /* FrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +55,11 @@
 		5BE7226122B9D13E00E2560C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BE7B0BA22D026BB00E0D705 /* PicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicViewController.swift; sourceTree = "<group>"; };
 		5BE7B0BC22D0282700E0D705 /* PicViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicViewCell.swift; sourceTree = "<group>"; };
+		5BFE6B7B22E6AE0800F56D56 /* FontData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontData.swift; sourceTree = "<group>"; };
+		5BFE6B7D22E6CCC300F56D56 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		5BFE6B7F22E6CDE700F56D56 /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
+		5BFE6B8122E6CDFC00F56D56 /* FontColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontColorViewController.swift; sourceTree = "<group>"; };
+		5BFE6B8522E7F69600F56D56 /* FontCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +76,10 @@
 		5B933B9122CEAB8000E2135B /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				5BBD1A9922E55DCE007A11BA /* ImageDelegate.swift */,
+				5B854E1022DE5F9F0061943F /* FetchImages.swift */,
 				5B933B8722CE89E100E2135B /* Colors.swift */,
+				5BFE6B7B22E6AE0800F56D56 /* FontData.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -73,7 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				5BE7225622B9D13A00E2560C /* Main.storyboard */,
+				5B933B8A22CEAB5C00E2135B /* FirstTableViewCell.xib */,
+				5B933B8E22CEAB6E00E2135B /* SecondTableViewCell.xib */,
+				5B933B9522CEC3A500E2135B /* FirstCollectionViewCell.xib */,
 				5BE7225E22B9D13E00E2560C /* LaunchScreen.storyboard */,
+				5B47CDB822CAF3E600C7DFCA /* Images.xcassets */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -85,15 +104,15 @@
 				5BE7225422B9D13A00E2560C /* FrontViewController.swift */,
 				5B933B8522CE807000E2135B /* DataTableViewController.swift */,
 				5B933B8922CEAB5C00E2135B /* FirstTableViewCell.swift */,
-				5B933B8A22CEAB5C00E2135B /* FirstTableViewCell.xib */,
 				5B933B8D22CEAB6E00E2135B /* SecondTableViewCell.swift */,
-				5B933B8E22CEAB6E00E2135B /* SecondTableViewCell.xib */,
 				5B933B9422CEC3A500E2135B /* FirstCollectionViewCell.swift */,
-				5B933B9522CEC3A500E2135B /* FirstCollectionViewCell.xib */,
 				5BE7B0BA22D026BB00E0D705 /* PicViewController.swift */,
 				5BE7B0BC22D0282700E0D705 /* PicViewCell.swift */,
 				5B74625322D29BFA00915A42 /* MemeViewController.swift */,
-				5B74625522D2A01400915A42 /* SubviewViewController.swift */,
+				5BFE6B7D22E6CCC300F56D56 /* MasterViewController.swift */,
+				5BFE6B7F22E6CDE700F56D56 /* FontViewController.swift */,
+				5BFE6B8122E6CDFC00F56D56 /* FontColorViewController.swift */,
+				5BFE6B8522E7F69600F56D56 /* FontCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,6 +122,7 @@
 			children = (
 				5BE7225122B9D13A00E2560C /* test */,
 				5BE7225022B9D13A00E2560C /* Products */,
+				5BE7225922B9D13A00E2560C /* test.xcdatamodeld */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,9 +140,7 @@
 				5B933B9322CEAB9900E2135B /* Controller */,
 				5B933B9222CEAB9200E2135B /* VIew */,
 				5B933B9122CEAB8000E2135B /* Modal */,
-				5B47CDB822CAF3E600C7DFCA /* Images.xcassets */,
 				5BE7226122B9D13E00E2560C /* Info.plist */,
-				5BE7225922B9D13A00E2560C /* test.xcdatamodeld */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -205,14 +223,20 @@
 				5BE7225522B9D13A00E2560C /* FrontViewController.swift in Sources */,
 				5B933B8822CE89E100E2135B /* Colors.swift in Sources */,
 				5B933B8622CE807000E2135B /* DataTableViewController.swift in Sources */,
+				5BFE6B8222E6CDFC00F56D56 /* FontColorViewController.swift in Sources */,
 				5BE7225322B9D13A00E2560C /* AppDelegate.swift in Sources */,
+				5BFE6B7E22E6CCC300F56D56 /* MasterViewController.swift in Sources */,
+				5B854E1122DE5F9F0061943F /* FetchImages.swift in Sources */,
 				5B933B8F22CEAB6E00E2135B /* SecondTableViewCell.swift in Sources */,
 				5B74625422D29BFA00915A42 /* MemeViewController.swift in Sources */,
+				5BFE6B8022E6CDE700F56D56 /* FontViewController.swift in Sources */,
+				5BBD1A9A22E55DCE007A11BA /* ImageDelegate.swift in Sources */,
 				5BE7225B22B9D13A00E2560C /* test.xcdatamodeld in Sources */,
+				5BFE6B7C22E6AE0800F56D56 /* FontData.swift in Sources */,
 				5B933B9622CEC3A500E2135B /* FirstCollectionViewCell.swift in Sources */,
 				5BE7B0BB22D026BB00E0D705 /* PicViewController.swift in Sources */,
-				5B74625622D2A01400915A42 /* SubviewViewController.swift in Sources */,
 				5BE7B0BD22D0282700E0D705 /* PicViewCell.swift in Sources */,
+				5BFE6B8622E7F69600F56D56 /* FontCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

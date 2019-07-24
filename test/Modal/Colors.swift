@@ -26,8 +26,31 @@ class Colors {
       Colors(color: UIColor(red: 238/255, green: 82/255, blue: 83/255, alpha: 1.0)),
       Colors(color: UIColor(red: 16/255, green: 172/255, blue: 132/255, alpha: 1.0)),
       Colors(color: UIColor(red: 95/255, green: 39/255, blue: 205/255, alpha: 1.0)),
-      Colors(color: UIColor(red: 255/255, green: 159/255, blue: 67/255, alpha: 1.0))
+      Colors(color: UIColor(red: 255/255, green: 159/255, blue: 67/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 225/255, green: 102/255, blue: 102/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 225/255, green: 225/255, blue: 0/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 102/255, green: 204/255, blue: 0/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 51/255, green: 102/255, blue: 0/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 0/255, green: 204/255, blue: 102/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 102/255, green: 178/255, blue: 255/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 0/255, green: 76/255, blue: 153/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 0/255, green: 153/255, blue: 76/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 178/255, green: 102/255, blue: 255/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 255/255, green: 102/255, blue: 255/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 102/255, green: 0/255, blue: 0/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 153/255, green: 0/255, blue: 153/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 153/255, green: 0/255, blue: 76/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 160/255, green: 160/255, blue: 160/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 153/255, green: 255/255, blue: 153/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 255/255, green: 255/255, blue: 153/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 153/255, green: 153/255, blue: 255/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 255/255, green: 128/255, blue: 0/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 0/255, green: 0/255, blue: 25/255, alpha: 1.0)),
+      Colors(color: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0))
     ]
+    
 
     var color: UIColor
 

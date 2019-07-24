@@ -12,14 +12,10 @@ class FirstCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageBc: UIImageView!
     @IBOutlet weak var mainView: UIView!
-    var color: [Colors] = [Colors]()
-  
+   
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        imageBc.layer.cornerRadius = CGFloat(15)
-        
-    
+      imageBc.layer.cornerRadius = CGFloat(15)
     }
 
 }

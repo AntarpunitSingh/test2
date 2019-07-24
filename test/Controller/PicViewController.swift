@@ -11,33 +11,27 @@ import UIKit
 class PicViewController: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
     var color = [Colors]()
-    
-
+  
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-
-       
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-      
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
-    }
-
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
         return color.count
+        }
+        
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PicViewCell", for: indexPath) as! PicViewCell
+        if indexPath.section == 0 {
         cell.image.backgroundColor = color[indexPath.row].color
-        
+        }
+     
         return cell
     }
     @IBAction func cancelButton(_ sender: Any) {
@@ -50,9 +44,5 @@ class PicViewController: UIViewController ,UICollectionViewDelegate ,UICollectio
         let widthPerItem :CGFloat = cellWidth / itemPerRow
         return CGSize(width: widthPerItem, height: widthPerItem)
         
-    }
-   
-   
-    
-    
+    } 
 }

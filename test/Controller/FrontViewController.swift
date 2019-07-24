@@ -20,7 +20,6 @@ class ViewController: UIViewController {
 
      override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         view.layer.cornerRadius = CGFloat(10)
         view.clipsToBounds = true
         subView.layer.cornerRadius = CGFloat(10)
@@ -29,16 +28,12 @@ class ViewController: UIViewController {
         subView.layer.shadowOpacity = Float(1)
         button.layer.cornerRadius = CGFloat(10)
         view.layer.backgroundColor = color2
-       
-   
     }
     override func viewDidLayoutSubviews() {
         super .viewDidLayoutSubviews()
         view.addSubview(subView)
-        
     }
     @IBAction func createButton(_ sender: Any) {
-    //    performSegue(withIdentifier: "ShowData", sender: self)
     }
 }
     
