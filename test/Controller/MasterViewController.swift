@@ -35,9 +35,8 @@ class MasterViewController: UIViewController , TextDelegate {
         vc.delegate = self
         return vc
     }()
-    
-    
-    
+    var val : NSAttributedString?
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -72,15 +71,15 @@ class MasterViewController: UIViewController , TextDelegate {
             NSAttributedString.Key.strokeWidth:  -2.0 ]
         
         topLabel.attributedText = NSAttributedString(string: value, attributes: labelAttributes)
+        delegate?.updateTextFieldFont(fontName: value)
     }
     func updateLabelFont(color: UIColor) {
         topLabel.textColor = color
-    
+        delegate?.updateTextFieldColor(color: color)
     }
-    
+   
     @IBAction func dismissAction(_ sender: Any) {
-        
+      
         dismiss(animated: true, completion: nil)
-        
     }
 }

@@ -12,7 +12,7 @@ class FontViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
     
 
     @IBOutlet weak var tableView: UITableView!
-    lazy var font = UIFont.familyNames
+    lazy var font = Fetch.font
     
     var delegate: TextDelegate?
     

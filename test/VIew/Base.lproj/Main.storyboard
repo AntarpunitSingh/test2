@@ -200,40 +200,47 @@
                                 <color key="tintColor" red="0.75686274509999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rcD-bO-pT5">
-                                <rect key="frame" x="0.0" y="132" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="132" width="375" height="551"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96K-2n-qWh" userLabel="TopText">
-                                <rect key="frame" x="0.0" y="182" width="375" height="20"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="96K-2n-qWh" userLabel="TopText">
+                                <rect key="frame" x="0.0" y="182" width="375" height="47"/>
+                                <gestureRecognizers/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3Km-uM-85F" appends="YES" id="AYF-3w-QFj"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-e8-7xc" userLabel="BottomText">
-                                <rect key="frame" x="0.0" y="609" width="375" height="20"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-e8-7xc" userLabel="BottomText">
+                                <rect key="frame" x="0.0" y="579" width="375" height="48"/>
+                                <gestureRecognizers/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="n0V-3v-QrD" appends="YES" id="d4P-Gu-Jk3"/>
+                                </connections>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6S-NH-SxS">
-                                <rect key="frame" x="0.0" y="685" width="375" height="44"/>
-                                <color key="backgroundColor" red="0.4823529411764706" green="0.50196078431372548" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="0eO-f0-dNI" userLabel="BottomToolBar">
+                                <rect key="frame" x="0.0" y="683" width="375" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="8nW-WU-psm"/>
+                                    <constraint firstAttribute="height" constant="46" id="cVR-Pw-gUe"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" width="106" id="L82-uF-dU1" userLabel="Layout">
+                                    <barButtonItem image="lay3" width="116" id="ps8-Y2-Jg4">
                                         <color key="tintColor" red="0.75686274509999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
-                                    <barButtonItem title="Font" id="CFT-fx-2GI" userLabel="Font">
+                                    <barButtonItem title="Item" image="font4" width="76" id="R9L-CD-5nH">
                                         <color key="tintColor" red="0.75686274509999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="w87-9u-PPL" kind="presentation" id="ecP-2s-3hp"/>
+                                            <segue destination="w87-9u-PPL" kind="presentation" identifier="ShowFont" id="Doz-Ts-YJz"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="FontSize" width="104" id="4df-wn-7PN" userLabel="FontSize">
+                                    <barButtonItem image="size5" width="110" id="dIg-9M-SnH">
                                         <color key="tintColor" red="0.75686274509999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
-                                    <barButtonItem title="Item" width="82" id="ch2-ps-FMU" userLabel="Image">
+                                    <barButtonItem title="Item" image="image2" width="72" id="q6F-83-duX">
                                         <color key="tintColor" red="0.75686274509999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                 </items>
@@ -241,34 +248,47 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="0eO-f0-dNI" firstAttribute="bottom" secondItem="dZP-7D-xZD" secondAttribute="bottom" id="5uL-Vb-9EB"/>
                             <constraint firstItem="ueo-oV-fCY" firstAttribute="trailing" secondItem="dZP-7D-xZD" secondAttribute="trailing" id="ABo-G4-HZK"/>
                             <constraint firstItem="rcD-bO-pT5" firstAttribute="leading" secondItem="dZP-7D-xZD" secondAttribute="leading" id="LdB-sl-glW"/>
                             <constraint firstItem="ueo-oV-fCY" firstAttribute="leading" secondItem="dZP-7D-xZD" secondAttribute="leading" id="OIk-ae-9gK"/>
                             <constraint firstItem="dZP-7D-xZD" firstAttribute="trailing" secondItem="rcD-bO-pT5" secondAttribute="trailing" id="PzS-g7-i9c"/>
                             <constraint firstItem="fW6-e8-7xc" firstAttribute="leading" secondItem="dZP-7D-xZD" secondAttribute="leading" id="TfF-am-mxf"/>
-                            <constraint firstItem="W6S-NH-SxS" firstAttribute="leading" secondItem="dZP-7D-xZD" secondAttribute="leading" id="XOp-KO-yjX"/>
+                            <constraint firstItem="0eO-f0-dNI" firstAttribute="trailing" secondItem="dZP-7D-xZD" secondAttribute="trailing" id="W1F-yC-Om6"/>
                             <constraint firstItem="ueo-oV-fCY" firstAttribute="top" secondItem="dZP-7D-xZD" secondAttribute="top" id="cIW-at-d1r"/>
                             <constraint firstItem="96K-2n-qWh" firstAttribute="leading" secondItem="dZP-7D-xZD" secondAttribute="leading" id="eSZ-UC-yOW"/>
                             <constraint firstItem="96K-2n-qWh" firstAttribute="top" secondItem="ueo-oV-fCY" secondAttribute="bottom" constant="50" id="ey3-kF-QUE"/>
                             <constraint firstItem="rcD-bO-pT5" firstAttribute="top" secondItem="ueo-oV-fCY" secondAttribute="bottom" id="f72-rs-qwb"/>
-                            <constraint firstItem="W6S-NH-SxS" firstAttribute="top" secondItem="fW6-e8-7xc" secondAttribute="bottom" constant="56" id="h4h-UZ-mVL"/>
-                            <constraint firstItem="W6S-NH-SxS" firstAttribute="top" secondItem="rcD-bO-pT5" secondAttribute="bottom" id="mmT-IO-5AX"/>
+                            <constraint firstItem="0eO-f0-dNI" firstAttribute="leading" secondItem="dZP-7D-xZD" secondAttribute="leading" id="hsd-m6-ZYw"/>
+                            <constraint firstItem="0eO-f0-dNI" firstAttribute="top" secondItem="rcD-bO-pT5" secondAttribute="bottom" id="rJI-w5-1oV"/>
                             <constraint firstItem="dZP-7D-xZD" firstAttribute="trailing" secondItem="96K-2n-qWh" secondAttribute="trailing" id="rkj-dz-hqb"/>
+                            <constraint firstItem="0eO-f0-dNI" firstAttribute="top" secondItem="fW6-e8-7xc" secondAttribute="bottom" constant="56" id="tEk-oH-AjN"/>
                             <constraint firstItem="dZP-7D-xZD" firstAttribute="trailing" secondItem="fW6-e8-7xc" secondAttribute="trailing" id="vEF-If-68J"/>
-                            <constraint firstItem="W6S-NH-SxS" firstAttribute="trailing" secondItem="dZP-7D-xZD" secondAttribute="trailing" id="wgH-fY-DhZ"/>
-                            <constraint firstItem="dZP-7D-xZD" firstAttribute="bottom" secondItem="W6S-NH-SxS" secondAttribute="bottom" id="ww2-Y4-0BP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dZP-7D-xZD"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="VHF-iF-Xaa"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bottomText" destination="fW6-e8-7xc" id="EN1-FA-sw5"/>
+                        <outlet property="bottomToolBar" destination="0eO-f0-dNI" id="m9j-Gq-UbY"/>
                         <outlet property="imageVw" destination="rcD-bO-pT5" id="ts3-MK-jJk"/>
                         <outlet property="topText" destination="96K-2n-qWh" id="lo0-Al-ecR"/>
                         <outlet property="topToolbar" destination="ueo-oV-fCY" id="U2K-CF-FRP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTW-Xy-4VW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="3Km-uM-85F" userLabel="topPan">
+                    <connections>
+                        <action selector="topPan:" destination="Dhm-Cc-axU" id="CEU-gy-nda"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="n0V-3v-QrD" userLabel="bottomPan">
+                    <connections>
+                        <action selector="bottomPan:" destination="Dhm-Cc-axU" id="Hrm-Y0-lrV"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2138" y="168"/>
         </scene>
@@ -368,7 +388,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2975" y="169"/>
+            <point key="canvasLocation" x="2137" y="-545"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cDL-qC-wIx">
@@ -499,7 +519,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="295" height="459"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FontCell" id="PMm-Ou-Wjh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FontCell" id="PMm-Ou-Wjh">
                                         <rect key="frame" x="0.0" y="28" width="295" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PMm-Ou-Wjh" id="ram-LC-gp7">
@@ -527,7 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uc7-4g-nEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2004" y="1578"/>
+            <point key="canvasLocation" x="2806" y="980"/>
         </scene>
         <!--Font Color View Controller-->
         <scene sceneID="FJg-5k-j9K">
@@ -615,10 +635,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccx-4z-i3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="1577.9556650246307"/>
+            <point key="canvasLocation" x="3361" y="979"/>
         </scene>
     </scenes>
     <resources>
+        <image name="font4" width="30" height="30"/>
+        <image name="image2" width="30" height="30"/>
+        <image name="lay3" width="30" height="30"/>
         <image name="pic5" width="775.5" height="336.5"/>
+        <image name="size5" width="30" height="30"/>
     </resources>
 </document>

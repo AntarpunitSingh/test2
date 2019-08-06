@@ -16,16 +16,17 @@ class MemeViewController: UIViewController {
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
     @IBOutlet weak var imageVw: UIImageView!
-    @IBOutlet weak var subView: UIView!
+
+    @IBOutlet weak var bottomToolBar: UIToolbar!
     
     var imagePassed: UIImage!
     var colorPassed: UIColor!
     
-    let memeTextAttributes: [NSAttributedString.Key: Any] = [
+    var memeTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.strokeColor: UIColor.black,
-        NSAttributedString.Key.foregroundColor: UIColor.white,
-        NSAttributedString.Key.font: UIFont(name: "DIN Alternate", size: 40)!,
-        NSAttributedString.Key.strokeWidth:  -4.0    ]
+        NSAttributedString.Key.font : UIFont(name: "Copperplate", size: 40)!,
+        NSAttributedString.Key.foregroundColor : UIColor.white,
+        NSAttributedString.Key.strokeWidth:  -4.0 ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class MemeViewController: UIViewController {
         imageVw.backgroundColor = colorPassed
         setStyle(toTextField: topText)
         setStyle(toTextField: bottomText)
-        updateTextField()
+      
    
         
     }
@@ -44,12 +45,12 @@ class MemeViewController: UIViewController {
         bottomText.textAlignment = .center
         subscribeToKeyboardNotifications()
         imageVw?.contentMode = .scaleAspectFit
+        
        
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         unsubscribeFromKeyboardNotifications()
-
     }
     
     
@@ -102,43 +103,61 @@ class MemeViewController: UIViewController {
     func generateMemedImage() -> UIImage {
         // Render view to an image
         topToolbar.isHidden = true
-        subView.isHidden = true
+        bottomToolBar.isHidden = true
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         topToolbar.isHidden = false
-        subView.isHidden = false
+         bottomToolBar.isHidden = false
    
         return memedImage
     }
     
+    @IBAction func topPan(_ sender: UIPanGestureRecognizer) {
+        let textView = sender.view!
+        let point = sender.translation(in: view)
+       
+      
+    }
     
     
+    @IBAction func bottomPan(_ sender: UIPanGestureRecognizer) {
+    }
 }
 extension MemeViewController: UITextFieldDelegate , changeTextfieldTextDelegate{
-    
-    
-    
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     func updateTextFieldFont(fontName: String) {
-        topText.defaultTextAttributes = [
-            NSAttributedString.Key.strokeColor: UIColor.black,
-            NSAttributedString.Key.font: UIFont(name: fontName, size: 40)!,
-            NSAttributedString.Key.strokeWidth:  -4.0    ]
+        topText.attributedText = NSAttributedString(string: topText.text!, attributes: [NSMutableAttributedString.Key.font : UIFont(name: fontName, size: 40)!])
+         bottomText.attributedText = NSAttributedString(string: bottomText.text!, attributes: [NSMutableAttributedString.Key.font : UIFont(name: fontName, size: 40)!])
+        memeTextAttributes.updateValue(UIFont(name: fontName, size: 40)!, forKey: NSAttributedString.Key.font)
+      updateTextField(textFieldA: topText, textFieldB: bottomText)
+        
     }
     func updateTextFieldColor(color: UIColor) {
-        topText.defaultTextAttributes = [
-            NSAttributedString.Key.foregroundColor: color,
-        ]
+        topText.attributedText = NSAttributedString(string: topText.text!, attributes: [NSMutableAttributedString.Key.foregroundColor : color])
+        bottomText.attributedText = NSAttributedString(string: bottomText.text!, attributes: [NSMutableAttributedString.Key.foregroundColor : color])
+        memeTextAttributes.updateValue(color, forKey: NSAttributedString.Key.foregroundColor)
+        updateTextField(textFieldA: topText, textFieldB: bottomText)
+      
     }
-    func updateTextField(){
-        let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc = sb.instantiateViewController(withIdentifier: "MasterViewController") as! MasterViewController
-        vc.delegate = self
+    func updateTextField(textFieldA :UITextField , textFieldB:UITextField){
+        textFieldA.defaultTextAttributes = memeTextAttributes
+        textFieldA.textAlignment = .center
+        textFieldB.defaultTextAttributes = memeTextAttributes
+        textFieldB.textAlignment = .center
+
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowFont"  {
+            let destinationVC = segue.destination as! MasterViewController
+            destinationVC.delegate = self
+        }
     }
 }
+
