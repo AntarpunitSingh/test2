@@ -41,7 +41,6 @@ class MasterViewController: UIViewController , TextDelegate {
         super.viewDidLoad()
         updateUI()
        
-        
         myView.layer.cornerRadius = CGFloat(10)
         segmentControl.layer.maskedCorners = [.layerMinXMinYCorner , .layerMaxXMinYCorner]
         segmentControl.layer.masksToBounds = true

@@ -11,4 +11,7 @@ struct GifResponse: Codable {
     var data: [DataObject]
     var meta: MetaObject
 }
-
+struct SingleGifResponse:Codable {
+    var data: DataObject
+    var meta: MetaObject
+}

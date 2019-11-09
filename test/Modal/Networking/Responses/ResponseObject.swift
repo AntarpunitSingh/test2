@@ -10,7 +10,7 @@ import Foundation
 
 //Mark -Data object
 struct DataObject:Codable {
-    
+    var id:String
     var images: ImageType
 }
 
@@ -26,14 +26,15 @@ struct MetaObject:Codable {
         case status
         case msg
         case response = "response_id"
-        
     }
 }
 struct ImageType:Codable {
     var fixed: SizeData
+    var downsized: SizeData
     
     enum CodingKeys: String ,CodingKey{
         case fixed = "fixed_height_small"
+        case downsized = "downsized_large"
     }
 }
 struct SizeData:Codable {

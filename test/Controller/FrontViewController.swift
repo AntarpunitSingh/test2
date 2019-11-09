@@ -22,10 +22,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.layer.cornerRadius = CGFloat(10)
         view.clipsToBounds = true
-        subView.layer.cornerRadius = CGFloat(10)
     //  subView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
         subView.layer.shadowRadius = CGFloat(10)
         subView.layer.shadowOpacity = Float(1)
+        subView.layer.cornerRadius = CGFloat(10)
         button.layer.cornerRadius = CGFloat(10)
         view.layer.backgroundColor = color2
     }

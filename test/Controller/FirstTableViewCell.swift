@@ -42,8 +42,8 @@ class FirstTableViewCell: UITableViewCell , UICollectionViewDataSource, UICollec
         delegate?.colorPassed(color: data[indexPath.row].color)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 120, height: 120)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        
+//        return CGSize(width: 120, height: 120)
+//    }
 }

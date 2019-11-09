@@ -15,6 +15,7 @@ import UIKit
     
     //Storing fetched network gifs
     static var trendingGifURL = [DataObject]()
+    static var trendingGifId : DataObject?
     
     //Storing fonts
     static let font = UIFont.familyNames

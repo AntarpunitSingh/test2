@@ -12,4 +12,5 @@ protocol ImageDelegate: class {
     // pass the the image or any variable you want in the func params
     func imagePassed(image: UIImage)
     func colorPassed(color: UIColor)
+    func gifPassed(gifUrl:String)
 }

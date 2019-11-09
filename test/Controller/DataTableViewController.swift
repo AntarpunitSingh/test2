@@ -8,13 +8,14 @@
 
 import UIKit
 import Photos
-
+import SDWebImage
 class DataTableViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
-    var images: [UIImage] = []
+   // var images: [UIImage] = []
+    var gifImage :UIImage!
     
     lazy var colorData: [Colors] = {
         return Colors.picData
@@ -24,9 +25,9 @@ class DataTableViewController: UIViewController {
         return Fetch.imageData
     }()
     
-    lazy var gifData : [DataObject] = {
+    var gifData : [DataObject] {
         return Fetch.trendingGifURL
-    }()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -38,14 +39,20 @@ class DataTableViewController: UIViewController {
         tableView.layer.backgroundColor = UIColor(red: 245/255, green: 246/255, blue: 250/255, alpha: 1.0).cgColor
         tableView.reloadData()
         fetchPhotos()
+        trendingNetworkCall()
+        giftestting()
+    }
+    func giftestting(){
         
         
+        
+
     }
     func trendingNetworkCall(){
         NetworkClient.getTrendingGif { (imageUrl, error) in
-            if let imageUrl = imageUrl {
+            if let imageUrl = imageUrl  {
                 Fetch.trendingGifURL = imageUrl
-                
+               
             }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -120,6 +127,7 @@ extension DataTableViewController: UITableViewDelegate ,UITableViewDataSource {
         else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ThirdTableViewCell", for: indexPath) as! ThirdTableViewCell
             cell.gif = gifData
+            cell.delegate = self
             return cell
         }
         return UITableViewCell()
@@ -222,6 +230,17 @@ extension DataTableViewController: ImageDelegate {
         self.dismiss(animated: true, completion: nil)
         navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(memeVC, animated: true)
+    }
+    func gifPassed(gifUrl: String) {
+        
+        let memeVC = storyboard?.instantiateViewController(withIdentifier: "MemeViewController") as! MemeViewController
+        memeVC.imagePassed = UIImage.gifImageWithURL(gifUrl)
+        memeVC.gifurl = URL(string: gifUrl)
+        self.dismiss(animated: true, completion: nil)
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.pushViewController(memeVC, animated: true)
+        
+        
     }
 }
 

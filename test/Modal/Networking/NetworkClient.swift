@@ -20,11 +20,13 @@ class NetworkClient {
         static let apiKey2 = "jnLveXZIKRLJ0jdEAzQiqjtbmALbBei4"
         
         case trending(String)
-        
+        case getGifId(String)
         var stringValue:String {
             switch self {
             case .trending(let limit):
                 return Endpoints.base + "/gifs/trending" + "?api_key=\(Endpoints.apiKey)" + "&limit=\(limit)" + "&rating=G"
+            case .getGifId(let id):
+                return Endpoints.base + "/gifs/\(id)" + "?api_key=\(Endpoints.apiKey)"
             }
         }
         var url:URL {
@@ -59,7 +61,7 @@ class NetworkClient {
             if let response = response {
                 
                 completion(response.data,nil)
-                print(response.meta.status)
+                print(response.meta.response)
                 print(response.meta.msg)
             }
             else {
@@ -69,7 +71,15 @@ class NetworkClient {
                 
             }
         }
-        
-
+    }
+    class func getGifById(id:String, completion:@escaping(DataObject?,Error?) -> Void){
+        taskGetRequest(url: Endpoints.getGifId(id).url, responseType: SingleGifResponse.self) { (response, error) in
+            if let response = response {
+                completion(response.data,nil)
+            }
+            else {
+                completion(nil,error)
+            }
+        }
     }
 }
